@@ -1,3 +1,13 @@
+<!-- 3-5 sentences reflection on how this went for you
+a tip for others to help conquer some part of the app that used to trip you up
+the times for your first and fourth runs -->
+
+### times
+1. first run:
+2. second run:
+3. third run:
+4. fourth run:
+
 # <img src="https://cloud.githubusercontent.com/assets/7833470/10899314/63829980-8188-11e5-8cdd-4ded5bcb6e36.png" height="60"> Rails Bog App
 
 ### Overview
@@ -107,7 +117,7 @@ To include the CSS from the library file you just downloaded into your pages, re
  *= require_self
  */
 ```
-or 
+or
 ```css
 /*
  * app/assets/stylesheets/application.css
@@ -130,7 +140,7 @@ In your text editor, open up `config/routes.rb`. Inside the routes `draw` block,
 <details>
   <summary>Hint: <code>config/routes.rb</code> should now look exactly like this...</summary>
   <p>
-  
+
   ```ruby
   #
   # config/routes.rb
@@ -139,7 +149,7 @@ In your text editor, open up `config/routes.rb`. Inside the routes `draw` block,
 
   end
   ```
-  
+
   </p>
 </details>
 <br>
@@ -149,7 +159,7 @@ Your routes tell your app how to direct **HTTP requests** to **controller action
 <details>
   <summary>Hint: updated routes</summary>
   <p>
-  
+
   ```ruby
   #
   # config/routes.rb
@@ -162,7 +172,7 @@ Your routes tell your app how to direct **HTTP requests** to **controller action
 
   end
   ```
-  
+
   </p>
 </details>
 <br>
@@ -183,7 +193,7 @@ Next, define the `creatures#index` action in the creatures controller. The varia
 
 <details>
   <summary>Hint: updated controller</summary>
-  
+
   ```ruby
   #
   # app/controllers/creatures_controller.rb
@@ -198,7 +208,7 @@ Next, define the `creatures#index` action in the creatures controller. The varia
     end
   end
   ```
-  
+
 </details>
 
 
@@ -255,7 +265,7 @@ Inside your creatures index view, iterate through all the creatures in the datab
 <details>
   <summary>Hint: Here's one way that could look:</summary>
   <p>
-  
+
   ```html
   <!-- app/views/creatures/index.html.erb -->
 
@@ -266,7 +276,7 @@ Inside your creatures index view, iterate through all the creatures in the datab
     </p>
   <% end %>
   ```
-  
+
   </p>
 </details>
 <br>
@@ -278,7 +288,7 @@ You've set up a CSS library in this project, but you haven't used it yet.  In yo
 <details>
   <summary>Hint: Here's one way that could look for Bootstrap:</summary>
   <p>
-  
+
   ```html
   <!-- app/views/layouts/application.html.erb -->
   <!--  ...  -->
@@ -292,7 +302,7 @@ You've set up a CSS library in this project, but you haven't used it yet.  In yo
     </div>
   </body>
   ```
-  
+
   </p>
 </details>
 <br>
@@ -300,7 +310,7 @@ You've set up a CSS library in this project, but you haven't used it yet.  In yo
 <details>
   <summary>Hint: Here's one way that could look for Materialize:</summary>
   <p>
-  
+
   ```html
   <!-- app/views/layouts/application.html.erb -->
   <!--  ...  -->
@@ -314,7 +324,7 @@ You've set up a CSS library in this project, but you haven't used it yet.  In yo
     </div>
   </body>
   ```
-  
+
   </p>
 </details>
 <br>
@@ -334,7 +344,7 @@ The Rails convention is to make a form for new creatures at the `/creatures/new`
 <details>
   <summary>Hint: updated routes</summary>
   <p>
-  
+
   ```ruby
   #
   #/config/routes.rb
@@ -347,7 +357,7 @@ The Rails convention is to make a form for new creatures at the `/creatures/new`
     get "/creatures/new", to: "creatures#new", as: "new_creature"
   end
   ```
-  
+
   </p>
 </details>
 <br>
@@ -359,7 +369,7 @@ When a user sends a GET request to `/creatures/new`, your server will search for
 <details>
   <summary>Hint: updated controller</summary>
   <p>
-  
+
   ```ruby
   #
   # app/controllers/creatures_controller.rb
@@ -376,7 +386,7 @@ When a user sends a GET request to `/creatures/new`, your server will search for
 
   end
   ```
-  
+
   </p>
 </details>
 
@@ -387,7 +397,7 @@ Create the view `new.html.erb` inside the `app/views/creatures` folder. On this 
 <details>
   <summary>Hint: here's one way that could look:</summary>
   <p>
-  
+
   ```html
   <!-- app/views/creatures/new.html.erb -->
 
@@ -397,7 +407,7 @@ Create the view `new.html.erb` inside the `app/views/creatures` folder. On this 
     <%= f.submit "Save Creature" %>
   <% end %>
   ```
-  
+
   </p>
 </details>
 
@@ -427,7 +437,7 @@ Your new creature form has `action="/creatures"` and `method="POST"`. The `POST 
 
   end
   ```
-  
+
   </p>
 </details>
 
@@ -455,7 +465,7 @@ The `POST /creatures` maps to the `creatures#create` controller action, so the n
     end
   end
   ```
-  
+
   </p>
 </details>
 
@@ -490,7 +500,7 @@ The `POST /creatures` maps to the `creatures#create` controller action, so the n
     end
   end
   ```
-  
+
   </p>
 </details>
 
@@ -519,7 +529,7 @@ Update your `creatures#new` action to send a new instance of a `Creature` to the
 
   end
   ```
-  
+
   </p>
 </details>
 
@@ -528,7 +538,7 @@ This sets `@creature` to a new instance of a `Creature`, which is automatically 
 <details>
   <summary>Hint: It might look something like this:</summary>
   <p>
-  
+
   ```html
   <!-- app/views/creatures/new.html.erb -->
 
@@ -538,7 +548,7 @@ This sets `@creature` to a new instance of a `Creature`, which is automatically 
     <%= f.submit "Save Creature" %>
   <% end %>
   ```
-  
+
   </p>
 </details>
 
@@ -553,7 +563,7 @@ First, define a `show` route.
 <details>
   <summary>Hint: updated routes</summary>
   <p>
-  
+
   ```ruby
   #
   # config/routes.rb
@@ -568,7 +578,7 @@ First, define a `show` route.
     get "/creatures/:id", to: "creatures#show", as: "creature"
   end
   ```
-  
+
   </p>
 </details>
 
@@ -602,7 +612,7 @@ Now that you have your `show` route, set up the controller action for `creatures
 
   end
   ```
-  
+
   </p>
 </details>
 
@@ -611,14 +621,14 @@ Next, create the view to display a single creature:
 <details>
   <summary>Hint: It might look like this:</summary>
   <p>
-  
+
   ```html
   <!-- app/views/creatures/show.html.erb -->
 
   <h3><%= @creature.name %></h3>
   <p><%=  @creature.description %></p>
   ```
-  
+
   </p>
 </details>
 
@@ -629,7 +639,7 @@ The `creatures#create` method currently redirects to `/creatures`. Again, this i
 <details>
   <summary>Hint: updated pseudocode</summary>
   <p>
-  
+
   ```ruby
   #
   # app/controllers/creatures_controller.rb
@@ -640,13 +650,13 @@ The `creatures#create` method currently redirects to `/creatures`. Again, this i
     ...
 
     def create
-      # whitelist params 
+      # whitelist params
       # create a new creature from `creature_params`
       # if creature saves, redirect to route that displays ONLY the newly created creature
     end
   end
   ```
-  
+
   </p>
 </details>
 <br>
@@ -655,7 +665,7 @@ The `creatures#create` method currently redirects to `/creatures`. Again, this i
 <details>
   <summary>Hint: updated  code</summary>
   <p>
-  
+
   ```ruby
   #
   # app/controllers/creatures_controller.rb
@@ -684,7 +694,7 @@ The `creatures#create` method currently redirects to `/creatures`. Again, this i
 
   end
   ```
-  
+
   </p>
 </details>
 
@@ -708,7 +718,7 @@ Editing a specific creature requires two methods:
 <details>
   <summary>Hint: updated routes</summary>
   <p>
-  
+
   ```ruby
   #
   # config/routes.rb
@@ -724,7 +734,7 @@ Editing a specific creature requires two methods:
     get "/creatures/:id/edit", to: "creatures#edit", as: "edit_creature"
   end
   ```
-  
+
   </p>
 </details>
 
@@ -735,7 +745,7 @@ Using your `creatures#new` and `creatures#show` methods as inspiration, you can 
 <details>
   <summary>Hint: updated controller pseudocode</summary>
   <p>
-  
+
   ```ruby
   #
   # app/controllers/creatures_controller.rb
@@ -748,14 +758,14 @@ Using your `creatures#new` and `creatures#show` methods as inspiration, you can 
     # show the edit creature form
     def edit
       # get the creature id from the url params
-      
+
       # use `creature_id` to find the creature in the database
         # and save it to an instance variable
       # render the edit view (it has access to instance variable)
     end
   end
   ```
-  
+
   </p>
 </details>
 
@@ -763,7 +773,7 @@ Using your `creatures#new` and `creatures#show` methods as inspiration, you can 
 <details>
   <summary>Hint: updated controller code</summary>
   <p>
-  
+
   ```ruby
   #
   # app/controllers/creatures_controller.rb
@@ -788,7 +798,7 @@ Using your `creatures#new` and `creatures#show` methods as inspiration, you can 
 
   end
   ```
-  
+
   </p>
 </details>
 
@@ -799,7 +809,7 @@ Create an `edit.html.erb` view inside `views/creatures`. Jump-start the edit for
 <details>
   <summary>Hint: it might look like this</summary>
   <p>
-  
+
   ```html
   <!-- app/views/creatures/edit.html.erb -->
 
@@ -809,7 +819,7 @@ Create an `edit.html.erb` view inside `views/creatures`. Jump-start the edit for
     <%= f.submit "Save Creature" %>
   <% end %>
   ```
-  
+
   </p>
 </details>
 
@@ -822,7 +832,7 @@ The update route will use the `id` of the creature to be updated. In Express, yo
 <details>
   <summary>Hint: updated routes</summary>
   <p>
-  
+
   ```ruby
   #
   # config/routes.rb
@@ -840,7 +850,7 @@ The update route will use the `id` of the creature to be updated. In Express, yo
     # put "/creatures/:id", to: "creatures#update"    # optional
   end
   ```
-  
+
   </p>
 </details>
 
@@ -867,14 +877,14 @@ In the `CreaturesController`, define an `update` method:
     def update
       # get the creature id from the url params
       # use `creature_id` to find the creature in the database and save to variable
-      # whitelist params 
+      # whitelist params
       # update the creature based on params
       # redirect to show page for the updated creature
     end
 
   end
   ```
-  
+
   </p>
 </details>
 <br>
@@ -915,7 +925,7 @@ In the `CreaturesController`, define an `update` method:
 
   end
   ```
-  
+
   </p>
 </details>
 
@@ -945,9 +955,9 @@ Now that `params` are whitelisted in two different places in the `CreaturesContr
       # update the creature based on whitelisted params returned by private method
       # redirect to show page for the updated creature
     end
-    
+
     private
-    
+
     def creature_params
       # whitelist params return whitelisted version
     end
@@ -988,12 +998,12 @@ Now that `params` are whitelisted in two different places in the `CreaturesContr
       # redirect_to creature_path(creature) is equivalent to:
       # redirect_to "/creatures/#{creature.id}"
     end
-    
+
     private
-    
+
     def creature_params
       # whitelist params return whitelisted version
-      params.require(:creature).permit(:name, :description) 
+      params.require(:creature).permit(:name, :description)
     end
 
   end
@@ -1038,7 +1048,7 @@ Following a similar pattern to our other routes, create a route to `destroy` (de
     delete "/creatures/:id", to: "creatures#destroy"
   end
   ```
-  
+
   </p>
 </details>
 
@@ -1052,7 +1062,7 @@ In the `CreaturesController`, define an `destroy` method:
 <details>
   <summary>Hint: pseudocode</summary>
   <p>
-  
+
   ```ruby
   #
   # app/controllers/creatures_controller.rb
@@ -1072,14 +1082,14 @@ In the `CreaturesController`, define an `destroy` method:
 
   end
   ```
-  
+
   </p>
 </details>
 <br>
 <details>
   <summary>Hint: code</summary>
   <p>
-  
+
   ```ruby
   #
   # app/controllers/creatures_controller.rb
@@ -1109,7 +1119,7 @@ In the `CreaturesController`, define an `destroy` method:
 
   end
   ```
-  
+
   </p>
 </details>
 
