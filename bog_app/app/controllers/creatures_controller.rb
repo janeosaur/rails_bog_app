@@ -8,16 +8,16 @@ class CreaturesController < ApplicationController
     @creature = Creature.new
   end
 
-  def create
-    creature = Creature.new(creature_params)
-    if creature.save
-      redirect_to creatures_path
-    end
-  end
-
   def show
     creature_id = params[:id]
     @creature = Creature.find creature_id
+  end
+
+  def create
+    creature = Creature.new(creature_params)
+    if creature.save
+      redirect_to creature_path(creature)
+    end
   end
 
   def edit
