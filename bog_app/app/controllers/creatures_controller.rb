@@ -26,8 +26,10 @@ class CreaturesController < ApplicationController
   end
 
   def update
+    creature_id = params[:id]
     creature = Creature.find creature_id
     creature.update_attributes(creature_params)
+    redirect_to creature_path(creature)
   end
 
 

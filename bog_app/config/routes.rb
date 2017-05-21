@@ -9,6 +9,6 @@ Rails.application.routes.draw do
   post "/creatures", to: "creatures#create"
   get "/creatures/:id", to: "creatures#show", as: "creature"
   get "/creatures/:id/edit", to: "creatures#edit"
-  patch "/creatures/:id", to: "creatures#udpate"
+  patch "/creatures/:id", to: "creatures#update"
 
 end
