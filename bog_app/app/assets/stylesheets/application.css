@@ -13,3 +13,8 @@
  *= require_tree .
  *= require_self
  */
+ /*
+  *
+  *= require bootstrap-3.3.7.min
+  *= require_tree .
+  */
