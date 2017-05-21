@@ -1,8 +1,10 @@
 
 <% @creatures.each do |creature| %>
 <p>
+  <%= link_to creature_path(creature) do %>
   <span> <%= creature.name %> </span>
   <span> <%= creature.description %> </span>
+  <% end %>
 </p>
 <% end %>
 
