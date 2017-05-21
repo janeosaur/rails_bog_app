@@ -35,11 +35,20 @@ class CreaturesController < ApplicationController
     # equivalent to "/creatures/#{creature.id}" - is this bc of line 33?
   end
 
+  def destroy
+    creature_id = params[:id]
+    creature = Creature.find creature_id
+    creature.destroy
+    redirect_to creatures_path
+  end
+
   private
 
   def creature_params
     params.require(:creature).permit(:name, :description)
   end
+
+
 
 end
 

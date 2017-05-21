@@ -10,5 +10,6 @@ Rails.application.routes.draw do
   get "/creatures/:id/edit", to: "creatures#edit", as: "edit_creature"
   patch "/creatures/:id", to: "creatures#update"#, as: "update_creature"
   # how to choose which paths will have path helper names?
+  delete "/creatures/:id", to: "creatures#destroy"
 
 end
