@@ -15,6 +15,11 @@ class CreaturesController < ApplicationController
     end
   end
 
+  def show
+    creature_id = params[:id]
+    @creature = Creature.find creature_id
+  end
+
   private
 
   def creature_params
