@@ -12,8 +12,14 @@ class CreaturesController < ApplicationController
     creature = Creature.new(creature_params)
 
     if creature.save
-      redirect_to creatures_path #path helper for /creatures
+      redirect_to creature_path(creature) #path helper for /creatures
+      #how does creature_path(creature) pull the :id from (creature)??
     end
+  end
+
+  def show
+    creature_id = params[:id]
+    @creature = Creature.find_by_id(creature_id)
   end
 
 end
