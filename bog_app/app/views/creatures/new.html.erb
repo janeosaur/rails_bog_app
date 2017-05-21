@@ -1,0 +1,14 @@
+<!-- below works only when creatures#new has: @creature = Creature.new -->
+<%= form_for @creature do |f| %>
+  <%= f.text_field :name %>
+  <%= f.text_area :description %>
+  <%= f.submit "Save Creature" %>
+<% end %>
+
+
+<!-- below works with or without @creature=Creature.new -->
+<!-- <%= form_for :creature, url: "/creatures", method: "post" do |f| %>
+  <%= f.text_field :name %>
+  <%= f.text_area :description %>
+  <%= f.submit "Save Creature" %>
+<% end %> -->
