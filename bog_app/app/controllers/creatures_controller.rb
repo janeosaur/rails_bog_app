@@ -15,6 +15,21 @@ class CreaturesController < ApplicationController
     end
   end
 
+  def show
+    creature_id = params[:id]
+    @creature = Creature.find creature_id
+  end
+
+  def edit
+    creature_id = params[:id]
+    @creature = Creature.find creature_id
+  end
+
+  def update
+    creature = Creature.find creature_id
+    creature.update_attributes(creature_params)
+  end
+
 
   private
 
